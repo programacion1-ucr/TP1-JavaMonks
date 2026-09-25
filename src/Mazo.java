@@ -49,7 +49,13 @@ public class Mazo{
 			manoInicial[i] = sacarFicha();
 		}
 		return manoInicial;
-	}	
+	}
+	public boolean quedanFichas(){
+		if (mazo.length == 0){
+			return false;
+		}
+		return true;
+	}
 
 	public static void main (String [] args){ //Es solo para probar que todo funcione, eliminar al final del proyecto
 		Mazo mazo = new Mazo(6);
@@ -61,6 +67,7 @@ public class Mazo{
 		mazo.imprimir(mazo.mazo);
 		mazo.imprimir(mano1);
 		mazo.imprimir(mano2);
+		System.out.println(mazo.quedanFichas());
 
 
 
