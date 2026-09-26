@@ -35,16 +35,16 @@ public class Jugador{
         return this.mano;
     }
     public boolean tieneFichaJugable(Tablero tablero) {
-
+        return true;
     }
     public int sumarPuntos(int puntos) {
         this.puntos += puntos;
         return this.puntos;
     }
     public int calcularPuntosMano() { //calcula los puntos de las fichas que quedaron al perder la ronda
-
+        return 0;
     }
 
-//    public static void main (String[] args) {}
+    public static void main (String[] args) {}
 }
 
