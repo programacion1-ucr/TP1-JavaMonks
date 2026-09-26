@@ -1,14 +1,50 @@
+import javax.swing.JOptionPane;
+
 public class Jugador{
+    private String nombre;
+    private int puntos;
+    private Ficha[] mano;
 
-	private Ficha [] mano;
+    public Jugador(){
 
-	public Jugador(){
-		mano = new Ficha[] mano;
-	}
-	public void setMano(Ficha [] mano){
-		this.mano = mano;
-	}
-	public Ficha[] getMano(){
-		return mano;
-	}
+    }
+
+    public void pedirNombre(String nombre){
+        this.nombre = JOptionPane.showInputDialog(nombre);
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public void agregarFicha(Ficha ficha){ //agrega una ficha a la mano del jugador
+        for(int i = 0; i < mano.length; i++){
+            if(mano[i] == null){
+                mano[i] = ficha;
+                return;
+            }
+        }
+    }
+    public void quitarFicha(Ficha ficha){ //quita una ficha de la mano del jugador cuando la juega
+        for(int i = 0; i < mano.length; i++){
+            if(mano[i] == ficha){
+                mano[i] = null;
+                return;
+            }
+        }
+    }
+    public Ficha[] mostrarMano() {
+        return this.mano;
+    }
+    public boolean tieneFichaJugable(Tablero tablero) {
+
+    }
+    public int sumarPuntos(int puntos) {
+        this.puntos += puntos;
+        return this.puntos;
+    }
+    public int calcularPuntosMano() { //calcula los puntos de las fichas que quedaron al perder la ronda
+
+    }
+
+//    public static void main (String[] args) {}
 }
+
