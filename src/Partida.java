@@ -8,6 +8,7 @@ public class Partida {
     private int metaPuntos;
     private boolean partidaFinalizada;
 
+
     public void iniciarRonda(){ //inicia la ronda, reparte las fichas a los jugadores y determina el primer turno
 
     }

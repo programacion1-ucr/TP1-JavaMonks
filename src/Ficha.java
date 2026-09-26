@@ -20,4 +20,11 @@ public class Ficha{
 	public String toString(){
 		return "[" + numeroSuperior + "|" + numeroInferior + "]";
 	}
+	public boolean esDoble(){
+		boolean esDoble = false;
+		if (getNumeroInferior()==getNumeroSuperior()){
+			esDoble = true;
+		}
+		return esDoble;
+	}
 }

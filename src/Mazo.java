@@ -51,10 +51,11 @@ public class Mazo{
 		return manoInicial;
 	}
 	public boolean quedanFichas(){
+		boolean quedanFichas = true;
 		if (mazo.length == 0){
-			return false;
+			quedanFichas = false;
 		}
-		return true;
+		return quedanFichas;
 	}
 
 	public static void main (String [] args){ //Es solo para probar que todo funcione, eliminar al final del proyecto
